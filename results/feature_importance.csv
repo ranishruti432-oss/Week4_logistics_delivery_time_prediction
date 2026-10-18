@@ -1,0 +1,13 @@
+feature,rmse_increase,std
+distance_km,19.0465,0.3527
+vehicle_type,5.5323,0.2601
+stops_on_route,2.9305,0.1231
+weather,1.8203,0.1477
+traffic_index,1.405,0.0907
+priority,0.3786,0.0378
+vehicle_load_pct,0.1845,0.0366
+package_weight_kg,0.0895,0.0201
+driver_experience_years,0.0805,0.0232
+hour_of_day,0.0289,0.0118
+day_of_week,-0.0013,0.004
+zone,-0.0018,0.0142

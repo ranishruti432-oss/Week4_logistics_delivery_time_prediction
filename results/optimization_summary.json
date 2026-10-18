@@ -1,0 +1,204 @@
+{
+  "note": "All outcomes are SIMULATED (digital-twin evaluation). Not real company savings.",
+  "A_dispatch_planning": {
+    "peak_standard_deliveries": 459,
+    "share_of_all_test_deliveries_pct": 38.2,
+    "deliveries_shifted": 180,
+    "shifted_share_pct": 39.2,
+    "avg_shift_hours_when_shifted": 1.81,
+    "avg_true_minutes_saved_per_shifted_delivery": 4.0,
+    "total_vehicle_minutes_saved": 719.8,
+    "avg_minutes_saved_per_peak_standard_delivery": 1.57,
+    "oracle_total_vehicle_minutes_saved": 956.8,
+    "pct_of_oracle_captured": 75.2,
+    "baseline_total_minutes_peak_standard": 20133.7,
+    "pct_reduction_in_on_road_minutes": 3.57,
+    "hourly_table": [
+      {
+        "hour": 7,
+        "model_pred_min": 32.9,
+        "true_expected_min": 32.8
+      },
+      {
+        "hour": 8,
+        "model_pred_min": 35.6,
+        "true_expected_min": 34.8
+      },
+      {
+        "hour": 9,
+        "model_pred_min": 36.7,
+        "true_expected_min": 36.1
+      },
+      {
+        "hour": 10,
+        "model_pred_min": 35.9,
+        "true_expected_min": 34.9
+      },
+      {
+        "hour": 11,
+        "model_pred_min": 33.7,
+        "true_expected_min": 33.2
+      },
+      {
+        "hour": 12,
+        "model_pred_min": 33.2,
+        "true_expected_min": 32.7
+      },
+      {
+        "hour": 13,
+        "model_pred_min": 33.3,
+        "true_expected_min": 32.6
+      },
+      {
+        "hour": 14,
+        "model_pred_min": 33.8,
+        "true_expected_min": 32.5
+      },
+      {
+        "hour": 15,
+        "model_pred_min": 33.6,
+        "true_expected_min": 32.6
+      },
+      {
+        "hour": 16,
+        "model_pred_min": 35.4,
+        "true_expected_min": 33.6
+      },
+      {
+        "hour": 17,
+        "model_pred_min": 37.2,
+        "true_expected_min": 35.6
+      },
+      {
+        "hour": 18,
+        "model_pred_min": 39.4,
+        "true_expected_min": 36.8
+      },
+      {
+        "hour": 19,
+        "model_pred_min": 37.2,
+        "true_expected_min": 35.6
+      },
+      {
+        "hour": 20,
+        "model_pred_min": 34.9,
+        "true_expected_min": 33.5
+      }
+    ],
+    "best_hour": 7,
+    "worst_hour": 18
+  },
+  "B_risk_alerts": {
+    "overall_late_rate_pct": 22.8,
+    "alert_levels": {
+      "Red": {
+        "deliveries": 257,
+        "share_pct": 21.4,
+        "actual_late_rate_pct": 76.3
+      },
+      "Amber": {
+        "deliveries": 274,
+        "share_pct": 22.8,
+        "actual_late_rate_pct": 20.8
+      },
+      "Green": {
+        "deliveries": 669,
+        "share_pct": 55.8,
+        "actual_late_rate_pct": 3.1
+      }
+    },
+    "red_or_amber": {
+      "flagged_pct": 44.2,
+      "precision_pct": 47.6,
+      "recall_pct": 92.3
+    },
+    "red_only": {
+      "flagged_pct": 21.4,
+      "precision_pct": 76.3,
+      "recall_pct": 71.5
+    },
+    "baseline_traffic_index_ge_7_rule": {
+      "flagged_pct": 4.1,
+      "precision_pct": 55.1,
+      "recall_pct": 9.9
+    },
+    "eta_mae_model_min": 4.15,
+    "eta_mae_rule_of_thumb_min": 9.92,
+    "buffer_used_min": 6.29,
+    "alert_reasons_pct": {
+      "Adverse weather": 40.7,
+      "Peak hour": 27.7,
+      "Long distance / many stops": 23.2,
+      "High traffic": 8.5
+    }
+  },
+  "C_vehicle_allocation": {
+    "batches": 200,
+    "parcels_per_batch": 20,
+    "fleet_size": 24,
+    "fleet_mix": {
+      "bike": 8,
+      "van": 12,
+      "truck": 4
+    },
+    "assumed_cost": {
+      "rate_inr_per_min": {
+        "bike": 4.0,
+        "van": 7.0,
+        "truck": 12.0
+      },
+      "fixed_inr_per_trip": {
+        "bike": 20.0,
+        "van": 60.0,
+        "truck": 150.0
+      },
+      "late_penalty_inr_per_min": 10.0
+    },
+    "avg_cost_per_batch_inr": {
+      "rule_based": 6037.3,
+      "model_guided": 5711.7,
+      "perfect_information_bound": 5691.7
+    },
+    "avg_vehicle_minutes_per_batch": {
+      "rule_based": 839.3,
+      "model_guided": 807.4,
+      "perfect_information_bound": 807.7
+    },
+    "avg_late_parcels_per_batch": {
+      "rule_based": 4.15,
+      "model_guided": 2.39,
+      "perfect_information_bound": 2.17
+    },
+    "cost_reduction_pct": 5.4,
+    "late_reduction_pct": 42.4,
+    "pct_of_bound_captured": 94.2,
+    "batches_where_model_guided_cheaper_pct": 96.5
+  },
+  "D_route_planning": {
+    "routes_simulated": 300,
+    "stops_per_route": 8,
+    "avg_true_route_minutes": {
+      "A_nearest_neighbour_distance": 198.3,
+      "B_2opt_distance": 184.6,
+      "C_2opt_traffic_aware_model": 184.5,
+      "Oracle_2opt_perfect_traffic_knowledge": 184.1
+    },
+    "reduction_oracle_vs_A_pct": 7.2,
+    "extra_reduction_oracle_vs_B_pct": 0.23,
+    "reduction_C_vs_A_pct": 7.0,
+    "reduction_B_vs_A_pct": 6.9,
+    "extra_reduction_C_vs_B_pct": 0.03,
+    "routes_where_C_faster_than_A_pct": 80.7,
+    "minutes_saved_per_route_C_vs_A": 13.8,
+    "model_learned_min_per_km_at_t0_t5_t10": [
+      2.22,
+      2.81,
+      3.44
+    ],
+    "true_min_per_km_at_t0_t5_t10": [
+      2.14,
+      2.89,
+      4.29
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+PASS. The full pipeline was re-run from scratch on 2026-10-18 (Python 3.12.3, numpy 2.4.4, pandas 3.0.2, scikit-learn 1.8.0). The regenerated dataset was byte-identical and all 143 compared result values matched the committed results (mismatches: 0).

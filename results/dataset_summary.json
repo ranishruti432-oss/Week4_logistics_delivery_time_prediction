@@ -1,0 +1,27 @@
+{
+  "n_rows": 6000,
+  "n_columns": 16,
+  "date_range": [
+    "2025-01-01 07:49:00",
+    "2025-12-31 20:55:00"
+  ],
+  "target_mean": 42.24,
+  "target_median": 38.25,
+  "target_std": 19.68,
+  "target_min": 7.44,
+  "target_max": 169.79,
+  "missing_traffic_index": 99,
+  "missing_driver_experience": 85,
+  "late_rate_vs_promised_eta": 0.2112,
+  "vehicle_share": {
+    "van": 0.667,
+    "bike": 0.319,
+    "truck": 0.014
+  },
+  "weather_share": {
+    "clear": 0.693,
+    "rain": 0.228,
+    "fog": 0.05,
+    "storm": 0.029
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "train_rows": 4800,
+  "test_rows": 1200,
+  "best_model": "Gradient Boosting",
+  "best_params": {
+    "subsample": 0.7,
+    "n_estimators": 350,
+    "min_samples_leaf": 10,
+    "max_depth": 4,
+    "learning_rate": 0.05
+  },
+  "all_best_params": {
+    "Ridge Regression": {
+      "alpha": 10
+    },
+    "Decision Tree": {
+      "min_samples_leaf": 10,
+      "max_depth": 12
+    },
+    "Random Forest": {
+      "n_estimators": 100,
+      "min_samples_leaf": 3,
+      "max_features": 0.6,
+      "max_depth": 15
+    },
+    "Gradient Boosting": {
+      "subsample": 0.7,
+      "n_estimators": 350,
+      "min_samples_leaf": 10,
+      "max_depth": 4,
+      "learning_rate": 0.05
+    }
+  },
+  "best_test": {
+    "MAE": 4.1517,
+    "RMSE": 6.1758,
+    "R2": 0.8972
+  },
+  "chronological_test": {
+    "MAE": 4.1067,
+    "RMSE": 5.988,
+    "R2": 0.9028
+  },
+  "chronological_test_rows": 1200,
+  "noise_floor_perfect_predictor_test": {
+    "MAE": 3.8042,
+    "RMSE": 5.7762,
+    "R2": 0.9101
+  },
+  "residual_buffer_q90_min": 6.287,
+  "buffer_empirical_coverage_test": 0.895,
+  "error_by_segment": {
+    "weather": {
+      "clear": 3.849,
+      "fog": 4.371,
+      "rain": 4.841,
+      "storm": 5.489
+    },
+    "vehicle": {
+      "bike": 4.56,
+      "truck": 6.383,
+      "van": 3.899
+    },
+    "peak_vs_offpeak": {
+      "peak": 4.456,
+      "off_peak": 3.877
+    }
+  },
+  "top_features": [
+    {
+      "feature": "distance_km",
+      "rmse_increase": 19.0465,
+      "std": 0.3527
+    },
+    {
+      "feature": "vehicle_type",
+      "rmse_increase": 5.5323,
+      "std": 0.2601
+    },
+    {
+      "feature": "stops_on_route",
+      "rmse_increase": 2.9305,
+      "std": 0.1231
+    },
+    {
+      "feature": "weather",
+      "rmse_increase": 1.8203,
+      "std": 0.1477
+    },
+    {
+      "feature": "traffic_index",
+      "rmse_increase": 1.405,
+      "std": 0.0907
+    },
+    {
+      "feature": "priority",
+      "rmse_increase": 0.3786,
+      "std": 0.0378
+    },
+    {
+      "feature": "vehicle_load_pct",
+      "rmse_increase": 0.1845,
+      "std": 0.0366
+    },
+    {
+      "feature": "package_weight_kg",
+      "rmse_increase": 0.0895,
+      "std": 0.0201
+    }
+  ],
+  "runtime_seconds": 162.4
+}
